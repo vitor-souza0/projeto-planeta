@@ -1,0 +1,112 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: "Poppins", serif;
+}
+
+body {
+   background-image: linear-gradient(to left, #87EFF6, #FFFFFF);
+}
+
+.cabecalho {
+   display: flex;
+   justify-content: space-between;
+   padding: 40px 80px;
+
+   & .nav {
+      display: flex;
+      gap: 50px;
+   }
+
+   & a {
+      color: #000;
+      text-decoration: none;
+   }
+
+   & .menu {
+      display: none;
+      cursor: pointer;
+   }
+}
+
+.main {
+   display: flex;
+   justify-content: space-between;
+   padding: 40px 80px;
+
+   & .lado-esquerdo {
+
+      display: flex;
+      flex-direction: column;
+      gap: 58px;
+   }
+
+   & .conteudo {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      & p:first-child {
+         color: #ff2323;
+         font-size: 24px;
+         font-weight: 600;
+      }
+
+      & h1 {
+         font-size: 40px;
+      }
+
+      & p:last-child {
+         font-size: 18px;
+      }
+   }
+
+   & .btns {
+      display: flex;
+      gap: 16px;
+
+      & button {
+         padding: 14px 24px;
+         border-radius: 16px;
+         font-size: 18px;
+         font-weight: 700;
+         background-color: #4ABBC2;
+         border: none;
+         cursor: pointer;
+      }
+
+      & button:last-child {
+         color: #4ABBC2;
+         background-color: transparent;
+         border: 2px solid;
+      }
+   }
+}
+
+@media screen and (max-width:1130px) {
+   .main {
+
+      flex-direction: column;
+
+      & .lado-esquerdo {
+         width: 100%;
+      }
+
+      & img {
+         width: 500px;
+      }
+   }
+}
+
+@media screen and (max-width: 860px) {
+   .cabecalho {
+      & .nav {
+         display: none;
+      }
+
+      & .menu {
+         display: flex;
+      }
+   }
+}
